@@ -1,5 +1,5 @@
 #! /usr/bin/perl
-#   gitdoc - a tool for writing github-hosted documents.
+#   gitdown - a tool for writing github-hosted documents.
 #
 #   See README.txt for details.
 #
@@ -28,10 +28,10 @@ push(@INC, $path);
 #   Uses the Perl SFL modules from htmlpp
 require 'sflcvdp.pl';                   #   SFL date picture formatting
 
-$version = "2014.10.10";
+$version = "2017.05.14";
 
 #   Parse and validate provided filename
-die "Syntax: gitdoc textfilename\n"
+die "Syntax: gitdown textfilename\n"
     unless $#ARGV == 0;
 $input = $ARGV [0];
 $self = $input;
@@ -212,7 +212,7 @@ $projectdir = $ENV{PWD};
 $projectdir =~ s/[\/]+([^\/]+\/)*([^\/]+)[\/]*/\2/;
 print OUTPUT "\n_This documentation was generated from ";
 print OUTPUT $projectdir . "/" . $input;
-print OUTPUT " using [Gitdown](https://github.com/zeromq/gitdown)_\n";
+print OUTPUT " using [Gitdown](https://github.com/zdndanny/gitdown)_\n";
 writeln_images ("</html>");
 close (IMAGES);
 close (OUTPUT);
